@@ -27,7 +27,7 @@ To install this application follow these steps:
 
  The above command will disply a json string in the console. To display the json in a nicer waym you can use the **_show_** option:
  
- ```php scraper scrape packages videx --show nice]```.
+ ```php scraper scrape packages videx --show nice```.
 
 
 ## Application structure
