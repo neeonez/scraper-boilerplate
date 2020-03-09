@@ -21,10 +21,13 @@ To install this application follow these steps:
 
  To run an available scraper you need to go to the application directory and run the command php ```scraper scrape [element] [location]```. Run just ```scraper scrape``` to get more information about the command.
 
- You can run the included scraper using the command ```scraper scrape packages videx```, which will scrape packages at the videx [https://videx.comesconnected.com/] (https://videx.comesconnected.com/) url.
+ You can run the included scraper using the next command, which will scrape packages at the videx [https://videx.comesconnected.com/] (https://videx.comesconnected.com/) url:
+
+  ```php scraper scrape packages videx```
 
  The above command will disply a json string in the console. To display the json in a nicer waym you can use the **_show_** option:
- ]```.php scraper scrape packages videx --show nice]```.
+ 
+ ```php scraper scrape packages videx --show nice]```.
 
 
 ## Application structure
