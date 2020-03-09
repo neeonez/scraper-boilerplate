@@ -2,7 +2,7 @@
 
 ## About
 
-This is a template php app to create and run scrapers from the console, returning results in JSON format.
+This is a console based web scraping app boilerplate to create and run scrapers from the console, returning results in JSON format. It's configured and ready to scrape more sites.
 
 ## Requirements
 
@@ -14,7 +14,7 @@ This is a template php app to create and run scrapers from the console, returnin
 To install this application follow these steps:
 
 * Crate a new folder in your system and access it.
-* Unzil the applicaiton file orr or clone the github repo into the crated folder ```git clone git@github.com:neeonez/test-roman.git ./```.
+* Unzip the applicaiton file or clone the github repo into the crated folder ```git clone git@github.com:neeonez/test-roman.git ./```.
 * Install dependences using the command ```php composer.phar install``` or ```php composer install`` and wait until composer installs all dependences.
 
 ## How run the application
@@ -36,7 +36,7 @@ To add a new scraper you have to edit the **_config/scrapers.php_** file. This f
 ```
 For example, the **_packages_** elment can be scraped at **_videx_** location with the scraper ```\App\Services\Scrapers\VidexPackageScraper```.
 
-The scraper VidexPackageScraper of the previous array is located in the folder **_app/Services/Scrapers/VidexPackageScraper.php_**. You can add another location to the array with the matching scraper designed to scrape the location.
+The scraper VidexPackageScraper of the previous array is located in the folder **_app/Services/Scrapers/VidexPackageScraper.php_**. You can add another location to the array with the matching scraper designed to scrape the location, or use an existing one.
 
 ## Execute Unit and Integration tests
 
@@ -46,7 +46,7 @@ To execute both unit and integration tests, open a terminal window and go to the
 
 Unit tests should correctly pass unless you have a missing PHP extension. Integration tests should run correctly unless you don't have access to the Internet.
 
-The objetive of the integration tests is to know which live scraper are failing so we know which scrapers need to be modified accordingly when a scraper fails.
+The objective of the integration tests is to know which scrapers are failing, so they can be fixed, as websites are usually updated frequently.
 
 The objective of unit tests if to test the main application code and not the specific code which will require an external resource to work properly. Because of this, unit tests use a fake test scraper which just returns a fixed result.
 
