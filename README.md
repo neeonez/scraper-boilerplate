@@ -23,6 +23,10 @@ To install this application follow these steps:
 
  You can run the included scraper using the command ```scraper scrape packages videx```, which will scrape packages at the videx [https://videx.comesconnected.com/] (https://videx.comesconnected.com/) url.
 
+ The above command will disply a json string in the console. To display the json in a nicer waym you can use the **_show_** option:
+ ]```.php scraper scrape packages videx --show nice]```.
+
+
 ## Application structure
 
 This application uses the [Laravel Zero Framework] (https://laravel-zero.com/), which is a light micro-framework based in Laravel specilly designed to create console based PHP applications. The [Goutte] (https://github.com/FriendsOfPHP/Goutte) scraper is included, as it's an easy to use scraping tool which can also emulate the behavior of a web browser.

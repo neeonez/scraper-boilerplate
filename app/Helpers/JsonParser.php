@@ -15,8 +15,12 @@ class JsonParser
      * @param array $array An array of data
      * @return string 
      */
-    public static function encode($array)
+    public static function encode($array, $show = 'ugly')
     {
-        return json_encode($array, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+        if ($show == 'nice') {
+            return json_encode($array, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+        } else {
+            return json_encode($array, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+        }
     }
 }

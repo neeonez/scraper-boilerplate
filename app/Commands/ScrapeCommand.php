@@ -6,6 +6,7 @@ use Illuminate\Console\Scheduling\Schedule;
 use LaravelZero\Framework\Commands\Command;
 use App\Services\ScraperManagerInterface;
 use App\Helpers\JsonParser;
+use Exception;
 
 /**
  * Command to scrape content
@@ -15,7 +16,7 @@ use App\Helpers\JsonParser;
 class ScrapeCommand extends Command
 {
     /** @var string The signature of the command */
-    protected $signature = 'scrape {element}{location}';
+    protected $signature = 'scrape {element}{location}{--show=}';
 
     /** @var string The description of the command */
     protected $description = 'scrape [element] [location]: Scrape the selected element in the requested location';
@@ -45,9 +46,15 @@ class ScrapeCommand extends Command
 
             $element = $this->argument('element');
             $location = $this->argument('location');
+            $show = $this->option('show');
 
             $data = $this->sraperManager->getScraper($element, $location)->scrape();
-            $jsonData = JsonParser::encode($data);
+
+            if ($show && !in_array($show, ['nice', 'ugly'])) {
+                throw new Exception('Show options are just "nice" and "ugly". The default option is "ugly".');
+            }
+
+            $jsonData = $show ? JsonParser::encode($data, $show) : JsonParser::encode($data);
 
             $this->info($jsonData);
 
