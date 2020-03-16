@@ -14,7 +14,7 @@ This is a console based web scraping app boilerplate to create and run scrapers 
 To install this application follow these steps:
 
 * Crate a new folder in your system and access it.
-* Unzip the applicaiton file or clone the github repo into the crated folder ```git clone git@github.com:neeonez/test-roman.git ./```.
+* Unzip the applicaiton file or clone the github repo into the crated folder.
 * Install dependences using the command ```php composer.phar install``` or ```php composer install`` and wait until composer installs all dependences.
 
 ## How run the application
