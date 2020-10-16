@@ -15,7 +15,7 @@ To install this application follow these steps:
 
 * Crate a new folder in your system and access it.
 * Unzip the applicaiton file or clone the github repo into the crated folder.
-* Install dependences using the command ```php composer.phar install``` or ```php composer install`` and wait until composer installs all dependences.
+* Install dependencies using the command ```php composer.phar install``` or ```composer install``` and wait until composer installs all dependencies.
 
 ## How run the application
 
@@ -25,7 +25,7 @@ To install this application follow these steps:
 
   ```php scraper scrape packages videx```
 
- The above command will disply a json string in the console. To display the json in a nicer waym you can use the **_show_** option:
+ The above command will disply a json string in the console. To display the json in a nicer way you can use the **_show_** option:
  
  ```php scraper scrape packages videx --show nice```.
 
